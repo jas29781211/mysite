@@ -1,0 +1,54 @@
+/* 基本設定 */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* ヘッダーのレイアウト */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 5%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+/* ギャラリー（Gridレイアウト）の魔法 */
+.gallery {
+    display: grid;
+    /* 画面幅に合わせて自動で列数を調整する設定 */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px; /* 画像同士の隙間 */
+    padding: 0 5% 50px 5%;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* ホバーした時に少し薄くするおしゃれ演出 */
+.photo img:hover {
+    opacity: 0.8;
+}
