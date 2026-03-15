@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - このサイトについて</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">About This Site</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 40px; text-align: center;">
+        <h1>このサイトについて</h1>
+        <p>私の旅行の記録や、日々の活動をまとめたギャラリーサイトです。</p>
+        <p>ここにはサイトを作った目的などを書くと良いですよ！</p>
+        <br>
+        <a href="index.html" class="logo">トップページへ戻る</a>
+    </main>
+</body>
+</html>
