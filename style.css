@@ -1,128 +1,105 @@
-/* 全体の設定 */
+/* 全体の雰囲気を「旅の雑誌」風に */
 body {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-    color: #333;
-    background-color: #fcfcfc; /* ほんのり明るいグレー */
+    font-family: "Georgia", "Times New Roman", "游明朝", "Yu Mincho", serif; /* 落ち着いた明朝体 */
+    color: #444;
+    background-color: #f8f9fa; /* ほんのりグレーで高級感を */
+    line-height: 1.8;
 }
 
-/* ヘッダー：海や空をイメージした青系 */
+/* ヘッダー：空と海をイメージしたグラデーション */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
-    position: sticky; /* スクロールしても上についてくる */
+    padding: 30px 8%;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    letter-spacing: 2px;
-    color: #005086; /* 深みのある海の色 */
+    letter-spacing: 4px;
+    color: #005086;
     text-transform: uppercase;
 }
 
 /* ナビゲーション */
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
 .nav a {
     text-decoration: none;
-    color: #666;
-    font-weight: 500;
-    transition: color 0.3s; /* ふわっと色が変わる */
+    color: #888;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
 .nav a:hover {
-    color: #00a8cc; /* ホバーすると明るい空の色に */
+    color: #005086;
+    border-bottom: 1px solid #005086;
 }
 
-/* メインのギャラリー部分（index.html用） */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.photo img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover; /* 画像を綺麗に正方形に収める */
-    border-radius: 8px; /* 角を少し丸く */
-    transition: transform 0.3s; /* 動く演出 */
-}
-
-.photo img:hover {
-    transform: scale(1.03); /* マウスを乗せると少し大きく */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* プロフィールやアバウトの本文用 */
+/* メインコンテンツの枠 */
 main {
-    animation: fadeIn 1s ease-in; /* じわっと表示される */
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #fff; /* 白い紙のような質感を出す */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    border-radius: 4px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-/* 年表（タイムライン）のスタイル */
+/* 年表のカスタマイズ（より繊細に） */
 .timeline {
     position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-    padding-left: 30px;
-    border-left: 2px solid #00a8cc; /* 年表の縦線 */
-    text-align: left;
+    padding-left: 40px;
+    border-left: 1px solid #ddd; /* 線を細くして繊細に */
 }
 
 .timeline-item {
-    position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-/* 年表の「点」 */
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -37px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
+    left: -46px; /* 線の位置に合わせる */
+    top: 8px;
+    width: 10px;
+    height: 10px;
     background-color: #005086;
-    border: 2px solid #fff;
     border-radius: 50%;
 }
 
 .timeline-date {
+    font-size: 1.2em;
     font-weight: bold;
-    color: #00a8cc;
-    font-size: 1.1em;
-    margin-bottom: 5px;
+    color: #005086;
+    margin-bottom: 8px;
 }
 
-.timeline-content h4 {
-    margin: 0;
-    font-size: 1.1em;
-    color: #333;
+/* ギャラリー（index.html） */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-.timeline-content p {
-    margin: 5px 0 0;
-    font-size: 0.95em;
-    color: #666;
+.photo img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 2px;
+    filter: grayscale(20%); /* ほんの少し彩度を落としてエモく */
+    transition: 0.5s;
+}
+
+.photo img:hover {
+    filter: grayscale(0%);
+    transform: translateY(-5px); /* 上にふわっと浮く */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
