@@ -80,3 +80,49 @@ main {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/* 年表（タイムライン）のスタイル */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 30px;
+    border-left: 2px solid #00a8cc; /* 年表の縦線 */
+    text-align: left;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* 年表の「点」 */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #005086;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #00a8cc;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 5px 0 0;
+    font-size: 0.95em;
+    color: #666;
+}
