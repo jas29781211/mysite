@@ -51,7 +51,7 @@ main {
 }
 
 .photo img {
-    width: 100%;
+    width: 200px;
     height: 300px;
     object-fit: cover; /* 写真を歪ませずに切り抜く */
     border-radius: 8px;
